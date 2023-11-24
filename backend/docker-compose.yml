@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  toptaltest-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USERNAME=toptaltest
+      - POSTGRESQL_PASSWORD=toptaltest
+      - POSTGRESQL_DATABASE=toptaltest
+  toptaltest-pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 82:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=toptaltest@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=toptaltest1234
